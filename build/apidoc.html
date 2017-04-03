@@ -1,0 +1,1548 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/achingbrain/pm2-web"
+
+    >pm2-web (v2.1.3)</a>
+</h1>
+<h4>A web based monitor for PM2</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web">module pm2-web</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.HostData">
+            function <span class="apidocSignatureSpan">pm2-web.</span>HostData
+            <span class="apidocSignatureSpan">(data, config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData">
+            function <span class="apidocSignatureSpan">pm2-web.</span>ProcessData
+            <span class="apidocSignatureSpan">(config, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app">
+            function <span class="apidocSignatureSpan">pm2-web.</span>app
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2-web.</span>HostData.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2-web.</span>ProcessData.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2-web.</span>app.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pm2-web.</span>routes</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.HostData">module pm2-web.HostData</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.HostData.HostData">
+            function <span class="apidocSignatureSpan">pm2-web.</span>HostData
+            <span class="apidocSignatureSpan">(data, config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.HostData.prototype">module pm2-web.HostData.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.HostData.prototype._removeMissingProcesses">
+            function <span class="apidocSignatureSpan">pm2-web.HostData.prototype.</span>_removeMissingProcesses
+            <span class="apidocSignatureSpan">(reportedProcesses)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.HostData.prototype.findProcessById">
+            function <span class="apidocSignatureSpan">pm2-web.HostData.prototype.</span>findProcessById
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.HostData.prototype.update">
+            function <span class="apidocSignatureSpan">pm2-web.HostData.prototype.</span>update
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.ProcessData">module pm2-web.ProcessData</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.ProcessData">
+            function <span class="apidocSignatureSpan">pm2-web.</span>ProcessData
+            <span class="apidocSignatureSpan">(config, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.ProcessData.prototype">module pm2-web.ProcessData.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype._append">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_append
+            <span class="apidocSignatureSpan">(memory, cpu, time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype._appendIfDifferent">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_appendIfDifferent
+            <span class="apidocSignatureSpan">(array, value, time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype._compress">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_compress
+            <span class="apidocSignatureSpan">(dataSet, maxSamples)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype._compressDay">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_compressDay
+            <span class="apidocSignatureSpan">(day, now, datapoints, distribution)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype._compressResourceUsage">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_compressResourceUsage
+            <span class="apidocSignatureSpan">(data, time)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype._map">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_map
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype.log">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>log
+            <span class="apidocSignatureSpan">(type, data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.ProcessData.prototype.update">
+            function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>update
+            <span class="apidocSignatureSpan">(data, system)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.app">module pm2-web.app</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.app">
+            function <span class="apidocSignatureSpan">pm2-web.</span>app
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.super_">
+            function <span class="apidocSignatureSpan">pm2-web.app.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.app.prototype">module pm2-web.app.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype._createExpress">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>_createExpress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype._createServer">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>_createServer
+            <span class="apidocSignatureSpan">(express)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype._route">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>_route
+            <span class="apidocSignatureSpan">(express, controller, url, method)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype.getAddress">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>getAddress
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype.setAddress">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>setAddress
+            <span class="apidocSignatureSpan">(address)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype.start">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.app.prototype.stop">
+            function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pm2-web.routes">module pm2-web.routes</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pm2-web.routes.1">
+            function <span class="apidocSignatureSpan">pm2-web.routes.</span>1
+            <span class="apidocSignatureSpan">($routeProvider)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">pm2-web.routes.</span>0</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web" id="apidoc.module.pm2-web">module pm2-web</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.HostData" id="apidoc.element.pm2-web.HostData">
+        function <span class="apidocSignatureSpan">pm2-web.</span>HostData
+        <span class="apidocSignatureSpan">(data, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HostData = function (data, config) {
+	Object.defineProperty(this, &#x22;_config&#x22;, {
+		enumerable: false,
+		value: config
+	});
+
+	this.name = data.name;
+	this.inspector = data.inspector;
+	this.pm2 = data.pm2,
+	this.system = {};
+	this.processes = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData" id="apidoc.element.pm2-web.ProcessData">
+        function <span class="apidocSignatureSpan">pm2-web.</span>ProcessData
+        <span class="apidocSignatureSpan">(config, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ProcessData = function (config, data) {
+	Object.defineProperty(this, &#x22;_config&#x22;, {
+		enumerable: false,
+		value: config
+	});
+
+	this.usage = {
+		cpu: data.usage ? data.usage.cpu : [],
+		memory: data.usage ? data.usage.memory : []
+	};
+
+	this.logs = [];
+
+	if(Array.isArray(data.logs)) {
+		data.logs.forEach(function(log) {
+			this.log(log.type, log.data);
+		}.bind(this));
+	}
+
+	this._map(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app" id="apidoc.element.pm2-web.app">
+        function <span class="apidocSignatureSpan">pm2-web.</span>app
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">app = function (options) {
+	EventEmitter.call(this);
+
+	// create container
+	this._container = new Container();
+
+	// set up logging
+	this._container.createAndRegister(&#x22;logger&#x22;, winston.Logger, {
+		transports: [
+			new (winston.transports.Console)({
+				timestamp: true,
+				colorize: true
+			})
+		]
+	});
+
+	// non-optional options
+	options = options || {};
+	options.requiredPm2Version = REQUIRED_PM2_VERSION;
+
+	// parse configuration
+	this._container.createAndRegister(&#x22;config&#x22;, require(__dirname + &#x22;/components/Configuration&#x22;), options);
+
+	// web controllers
+	this._container.createAndRegister(&#x22;homeController&#x22;, require(__dirname + &#x22;/routes/Home&#x22;));
+
+	// listens for events
+	this._container.register(&#x22;pm2InterfaceFactory&#x22;, require(&#x22;pm2-interface&#x22;));
+	this._container.createAndRegister(&#x22;pm2Listener&#x22;, require(__dirname + &#x22;/components/PM2Listener&#x22;));
+
+	// create express
+	this._express = this._createExpress();
+
+	// http(s) server
+	this._server = this._createServer(this._express);
+
+	// web sockets
+	this._container.createAndRegister(&#x22;webSocketResponder&#x22;, require(__dirname + &#x22;/components/WebSocketResponder&#x22;));
+ 	this._container.createAndRegister(&#x22;webSocketServer&#x22;, WebSocketServer, {
+		server: this._server,
+		path: &#x22;/ws&#x22;
+	});
+
+	// holds host data
+	this._container.createAndRegister(&#x22;hostList&#x22;, require(__dirname + &#x22;/components/ServerHostList&#x22;));
+
+	// make errors a little more descriptive
+	process.on(&#x22;uncaughtException&#x22;, function (exception) {
+		this._container.find(&#x22;logger&#x22;).error(&#x22;PM2&#x22;, &#x22;Uncaught exception&#x22;, exception &#x26;&#x26; exception.stack ? exception.stack : &#x22;No stack trace
+ available&#x22;);
+
+		throw exception;
+	}.bind(this));
+
+	// make sure we shut down cleanly
+	process.on(&#x22;SIGINT&#x22;, this.stop.bind(this));
+
+	// make sure we shut down cleanly
+	process.on(&#x22;message&#x22;, function(message) {
+		if (message == &#x22;shutdown&#x22;) {
+			this.stop();
+		}
+	});
+
+	// make sure we shut down cleanly
+	process.on(&#x22;exit&#x22;, this.stop.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.HostData" id="apidoc.module.pm2-web.HostData">module pm2-web.HostData</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.HostData.HostData" id="apidoc.element.pm2-web.HostData.HostData">
+        function <span class="apidocSignatureSpan">pm2-web.</span>HostData
+        <span class="apidocSignatureSpan">(data, config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HostData = function (data, config) {
+	Object.defineProperty(this, &#x22;_config&#x22;, {
+		enumerable: false,
+		value: config
+	});
+
+	this.name = data.name;
+	this.inspector = data.inspector;
+	this.pm2 = data.pm2,
+	this.system = {};
+	this.processes = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.HostData.prototype" id="apidoc.module.pm2-web.HostData.prototype">module pm2-web.HostData.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.HostData.prototype._removeMissingProcesses" id="apidoc.element.pm2-web.HostData.prototype._removeMissingProcesses">
+        function <span class="apidocSignatureSpan">pm2-web.HostData.prototype.</span>_removeMissingProcesses
+        <span class="apidocSignatureSpan">(reportedProcesses)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_removeMissingProcesses = function (reportedProcesses) {
+	this.processes = this.processes.filter(function(existingProcess) {
+		for(var i = 0; i &#x3c; reportedProcesses.length; i++) {
+			if(reportedProcesses[i].name == existingProcess.name) {
+				return true;
+			}
+		}
+
+		return false;
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	];
+	this.system.memory = {
+		free: data.system.memory.free,
+		total: data.system.memory.total,
+		used: data.system.memory.total - data.system.memory.free
+	};
+
+	this.<span class="apidocCodeKeywordSpan">_removeMissingProcesses</span>(data.processes);
+
+	data.processes.forEach(function(reportedProcess) {
+		var existingProcess = this.findProcessById(reportedProcess.id);
+
+		if(!existingProcess) {
+			existingProcess = new ProcessData(this._config, reportedProcess);
+			this.processes.push(existingProcess);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.HostData.prototype.findProcessById" id="apidoc.element.pm2-web.HostData.prototype.findProcessById">
+        function <span class="apidocSignatureSpan">pm2-web.HostData.prototype.</span>findProcessById
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findProcessById = function (id) {
+	for(var i = 0; i &#x3c; this.processes.length; i++) {
+		if(this.processes[i].id == id) {
+			return this.processes[i];
+		}
+	}
+
+	return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		total: data.system.memory.total,
+		used: data.system.memory.total - data.system.memory.free
+	};
+
+	this._removeMissingProcesses(data.processes);
+
+	data.processes.forEach(function(reportedProcess) {
+		var existingProcess = this.<span class="apidocCodeKeywordSpan">findProcessById</span>(reportedProcess.id);
+
+		if(!existingProcess) {
+			existingProcess = new ProcessData(this._config, reportedProcess);
+			this.processes.push(existingProcess);
+		}
+
+		existingProcess.update(reportedProcess, data.system);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.HostData.prototype.update" id="apidoc.element.pm2-web.HostData.prototype.update">
+        function <span class="apidocSignatureSpan">pm2-web.HostData.prototype.</span>update
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data) {
+	this.lastUpdated = Date.now();
+
+	[&#x22;hostname&#x22;, &#x22;cpu_count&#x22;, &#x22;uptime&#x22;, &#x22;time&#x22;].forEach(function(key) {
+		this.system[key] = data.system[key]
+	}.bind(this));
+
+	this.system.load = [
+		data.system.load[0],
+		data.system.load[1],
+		data.system.load[2]
+	];
+	this.system.memory = {
+		free: data.system.memory.free,
+		total: data.system.memory.total,
+		used: data.system.memory.total - data.system.memory.free
+	};
+
+	this._removeMissingProcesses(data.processes);
+
+	data.processes.forEach(function(reportedProcess) {
+		var existingProcess = this.findProcessById(reportedProcess.id);
+
+		if(!existingProcess) {
+			existingProcess = new ProcessData(this._config, reportedProcess);
+			this.processes.push(existingProcess);
+		}
+
+		existingProcess.update(reportedProcess, data.system);
+	}.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var existingProcess = this.findProcessById(reportedProcess.id);
+
+		if(!existingProcess) {
+			existingProcess = new ProcessData(this._config, reportedProcess);
+			this.processes.push(existingProcess);
+		}
+
+		existingProcess.<span class="apidocCodeKeywordSpan">update</span>(reportedProcess, data.system);
+	}.bind(this));
+};
+
+HostData.prototype._removeMissingProcesses = function(reportedProcesses) {
+	this.processes = this.processes.filter(function(existingProcess) {
+		for(var i = 0; i &#x3c; reportedProcesses.length; i++) {
+			if(reportedProcesses[i].name == existingProcess.name) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.ProcessData" id="apidoc.module.pm2-web.ProcessData">module pm2-web.ProcessData</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.ProcessData" id="apidoc.element.pm2-web.ProcessData.ProcessData">
+        function <span class="apidocSignatureSpan">pm2-web.</span>ProcessData
+        <span class="apidocSignatureSpan">(config, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ProcessData = function (config, data) {
+	Object.defineProperty(this, &#x22;_config&#x22;, {
+		enumerable: false,
+		value: config
+	});
+
+	this.usage = {
+		cpu: data.usage ? data.usage.cpu : [],
+		memory: data.usage ? data.usage.memory : []
+	};
+
+	this.logs = [];
+
+	if(Array.isArray(data.logs)) {
+		data.logs.forEach(function(log) {
+			this.log(log.type, log.data);
+		}.bind(this));
+	}
+
+	this._map(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.ProcessData.prototype" id="apidoc.module.pm2-web.ProcessData.prototype">module pm2-web.ProcessData.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype._append" id="apidoc.element.pm2-web.ProcessData.prototype._append">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_append
+        <span class="apidocSignatureSpan">(memory, cpu, time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_append = function (memory, cpu, time) {
+	this.usage.memory = this._compressResourceUsage(this.usage.memory, time);
+	this.usage.cpu = this._compressResourceUsage(this.usage.cpu, time);
+
+	this._appendIfDifferent(this.usage.memory, memory, time);
+	this._appendIfDifferent(this.usage.cpu, cpu, time);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	this._map(data);
+}
+
+ProcessData.prototype.update = function(data, system) {
+	this._map(data);
+
+	this.<span class="apidocCodeKeywordSpan">_append</span>((data.memory / system.memory.total) * 100, data.cpu, system.time);
+}
+
+ProcessData.prototype.log = function(type, data) {
+	if(!type || !data) {
+		return;
+	}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype._appendIfDifferent" id="apidoc.element.pm2-web.ProcessData.prototype._appendIfDifferent">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_appendIfDifferent
+        <span class="apidocSignatureSpan">(array, value, time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_appendIfDifferent = function (array, value, time) {
+	var rounded = ~~value;
+
+	// if the last two datapoints have the same value as the one we&#x27;re about to add,
+	// don&#x27;t add a third, just change the date of the last one to be now
+	// x-----x becomes x-----------x instead of x-----x-----x
+	if(array.length &#x3e; 1 &#x26;&#x26; array[array.length - 1].y == rounded &#x26;&#x26; array[array.length - 2].y == rounded) {
+		array[array.length - 1].x = time;
+
+		return;
+	}
+
+	array.push({
+		x: time,
+		y: rounded
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	}.bind(this));
+}
+
+ProcessData.prototype._append = function(memory, cpu, time) {
+	this.usage.memory = this._compressResourceUsage(this.usage.memory, time);
+	this.usage.cpu = this._compressResourceUsage(this.usage.cpu, time);
+
+	this.<span class="apidocCodeKeywordSpan">_appendIfDifferent</span>(this.usage.memory, memory, time);
+	this._appendIfDifferent(this.usage.cpu, cpu, time);
+}
+
+ProcessData.prototype._appendIfDifferent = function(array, value, time) {
+	var rounded = ~~value;
+
+	// if the last two datapoints have the same value as the one we&#x27;re about to add,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype._compress" id="apidoc.element.pm2-web.ProcessData.prototype._compress">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_compress
+        <span class="apidocSignatureSpan">(dataSet, maxSamples)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_compress = function (dataSet, maxSamples) {
+	var sampleSize = Math.ceil(dataSet.length/maxSamples);
+
+	var output = [];
+	var offset = 0;
+	var data = 0;
+	var date = 0;
+
+	while(offset &#x3c; dataSet.length) {
+		var processed = 0;
+
+		for(var i = 0; i &#x3c; sampleSize; i++) {
+			if(offset + i == dataSet.length) {
+				break;
+			}
+
+			// might at some point overflow MAX_INT here. won&#x27;t that be fun.
+			date += dataSet[offset + i].x;
+
+			data += dataSet[offset + i].y;
+
+			processed++;
+		}
+
+		offset += processed;
+
+		output.push({
+			x: date / processed,
+			y: data / processed
+		});
+
+		data = 0;
+		date = 0;
+	}
+
+	return output;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	if(dayDifference &#x3e; distribution.length) {
+		return [];
+	}
+
+	var percent = distribution[dayDifference];
+
+	return this.<span class="apidocCodeKeywordSpan">_compress</span>(day, (datapoints/100) * percent);
+}
+
+ProcessData.prototype._compress = function(dataSet, maxSamples) {
+	var sampleSize = Math.ceil(dataSet.length/maxSamples);
+
+	var output = [];
+	var offset = 0;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype._compressDay" id="apidoc.element.pm2-web.ProcessData.prototype._compressDay">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_compressDay
+        <span class="apidocSignatureSpan">(day, now, datapoints, distribution)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_compressDay = function (day, now, datapoints, distribution) {
+	if(day.length == 0) {
+		return day;
+	}
+
+	var dayDifference = Math.floor((now - day[day.length - 1].x) / MILLISECONDS_IN_A_DAY);
+
+	if(dayDifference &#x3e; distribution.length) {
+		return [];
+	}
+
+	var percent = distribution[dayDifference];
+
+	return this._compress(day, (datapoints/100) * percent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// all datapoints were in one day..
+	if(days.length == 0) {
+		days.push(day);
+	}
+
+	// compress each days worth of data
+	days.forEach(function(day) {
+		var compressed = this.<span class="apidocCodeKeywordSpan">_compressDay</span>(day, now, datapoints, distribution);
+
+		usage = usage.concat(compressed);
+	}.bind(this));
+
+	return usage;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype._compressResourceUsage" id="apidoc.element.pm2-web.ProcessData.prototype._compressResourceUsage">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_compressResourceUsage
+        <span class="apidocSignatureSpan">(data, time)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_compressResourceUsage = function (data, time) {
+	var datapoints = this._config.get(&#x22;graph:datapoints&#x22;);
+	datapoints -= 1;
+
+	var distribution = this._config.get(&#x22;graph:distribution&#x22;);
+	var maxAgeInDays = distribution.length * MILLISECONDS_IN_A_DAY;
+
+	if(data.length &#x3c; datapoints) {
+		return data;
+	}
+
+	var now = time;
+	var cutoff = now - maxAgeInDays;
+	var usage = [];
+
+	var days = [];
+	var day = [];
+
+	// group all data by day
+	data.forEach(function(datum) {
+		if(datum.x &#x3c; cutoff) {
+			// ignore anything older than graph:maxAgeInDays
+			return;
+		}
+
+		// record date so we can easily compare days
+		datum.date = new Date(datum.x);
+
+		if(day[day.length - 1] &#x26;&#x26; day[day.length - 1].date.getDate() != datum.date.getDate()) {
+			days.push(day);
+			day = [];
+		} else {
+			day.push(datum);
+		}
+	});
+
+	// all datapoints were in one day..
+	if(days.length == 0) {
+		days.push(day);
+	}
+
+	// compress each days worth of data
+	days.forEach(function(day) {
+		var compressed = this._compressDay(day, now, datapoints, distribution);
+
+		usage = usage.concat(compressed);
+	}.bind(this));
+
+	return usage;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ProcessData.prototype._map = function(data) {
+	[&#x22;id&#x22;, &#x22;pid&#x22;, &#x22;name&#x22;, &#x22;script&#x22;, &#x22;uptime&#x22;, &#x22;restarts&#x22;, &#x22;status&#
+x22;, &#x22;memory&#x22;, &#x22;cpu&#x22;, &#x22;reloading&#x22;, &#x22;debugPort&#x22;, &#x22;mode&#x22;].forEach(function(key) {
+		this[key] = data[key];
+	}.bind(this));
+}
+
+ProcessData.prototype._append = function(memory, cpu, time) {
+	this.usage.memory = this.<span class="apidocCodeKeywordSpan">_compressResourceUsage</span>(this.usage.memory, time);
+	this.usage.cpu = this._compressResourceUsage(this.usage.cpu, time);
+
+	this._appendIfDifferent(this.usage.memory, memory, time);
+	this._appendIfDifferent(this.usage.cpu, cpu, time);
+}
+
+ProcessData.prototype._appendIfDifferent = function(array, value, time) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype._map" id="apidoc.element.pm2-web.ProcessData.prototype._map">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>_map
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_map = function (data) {
+	[&#x22;id&#x22;, &#x22;pid&#x22;, &#x22;name&#x22;, &#x22;script&#x22;, &#x22;uptime&#x22;, &#x22;restarts&#x22;, &#x22;status&#x22;, &#x22;memory&#x22;, &#x22;cpu&#x22;, &#x22;reloading&#x22;, &#x22;debugPort&#x22;, &#x22;mode&#x22;].forEach(function
+(key) {
+		this[key] = data[key];
+	}.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	if(Array.isArray(data.logs)) {
+		data.logs.forEach(function(log) {
+			this.log(log.type, log.data);
+		}.bind(this));
+	}
+
+	this.<span class="apidocCodeKeywordSpan">_map</span>(data);
+}
+
+ProcessData.prototype.update = function(data, system) {
+	this._map(data);
+
+	this._append((data.memory / system.memory.total) * 100, data.cpu, system.time);
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype.log" id="apidoc.element.pm2-web.ProcessData.prototype.log">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>log
+        <span class="apidocSignatureSpan">(type, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (type, data) {
+	if(!type || !data) {
+		return;
+	}
+
+	this.logs.push({
+		type: type,
+		data: data
+	});
+
+	// rotate logs if necessary
+	if(this.logs.length &#x3e; this._config.get(&#x22;logs:max&#x22;)) {
+		this.logs.splice(0, this.logs.length - this._config.get(&#x22;logs:max&#x22;));
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		memory: data.usage ? data.usage.memory : []
+	};
+
+	this.logs = [];
+
+	if(Array.isArray(data.logs)) {
+		data.logs.forEach(function(log) {
+			this.<span class="apidocCodeKeywordSpan">log</span>(log.type, log.data);
+		}.bind(this));
+	}
+
+	this._map(data);
+}
+
+ProcessData.prototype.update = function(data, system) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.ProcessData.prototype.update" id="apidoc.element.pm2-web.ProcessData.prototype.update">
+        function <span class="apidocSignatureSpan">pm2-web.ProcessData.prototype.</span>update
+        <span class="apidocSignatureSpan">(data, system)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">update = function (data, system) {
+	this._map(data);
+
+	this._append((data.memory / system.memory.total) * 100, data.cpu, system.time);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var existingProcess = this.findProcessById(reportedProcess.id);
+
+		if(!existingProcess) {
+			existingProcess = new ProcessData(this._config, reportedProcess);
+			this.processes.push(existingProcess);
+		}
+
+		existingProcess.<span class="apidocCodeKeywordSpan">update</span>(reportedProcess, data.system);
+	}.bind(this));
+};
+
+HostData.prototype._removeMissingProcesses = function(reportedProcesses) {
+	this.processes = this.processes.filter(function(existingProcess) {
+		for(var i = 0; i &#x3c; reportedProcesses.length; i++) {
+			if(reportedProcesses[i].name == existingProcess.name) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.app" id="apidoc.module.pm2-web.app">module pm2-web.app</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.app" id="apidoc.element.pm2-web.app.app">
+        function <span class="apidocSignatureSpan">pm2-web.</span>app
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">app = function (options) {
+	EventEmitter.call(this);
+
+	// create container
+	this._container = new Container();
+
+	// set up logging
+	this._container.createAndRegister(&#x22;logger&#x22;, winston.Logger, {
+		transports: [
+			new (winston.transports.Console)({
+				timestamp: true,
+				colorize: true
+			})
+		]
+	});
+
+	// non-optional options
+	options = options || {};
+	options.requiredPm2Version = REQUIRED_PM2_VERSION;
+
+	// parse configuration
+	this._container.createAndRegister(&#x22;config&#x22;, require(__dirname + &#x22;/components/Configuration&#x22;), options);
+
+	// web controllers
+	this._container.createAndRegister(&#x22;homeController&#x22;, require(__dirname + &#x22;/routes/Home&#x22;));
+
+	// listens for events
+	this._container.register(&#x22;pm2InterfaceFactory&#x22;, require(&#x22;pm2-interface&#x22;));
+	this._container.createAndRegister(&#x22;pm2Listener&#x22;, require(__dirname + &#x22;/components/PM2Listener&#x22;));
+
+	// create express
+	this._express = this._createExpress();
+
+	// http(s) server
+	this._server = this._createServer(this._express);
+
+	// web sockets
+	this._container.createAndRegister(&#x22;webSocketResponder&#x22;, require(__dirname + &#x22;/components/WebSocketResponder&#x22;));
+ 	this._container.createAndRegister(&#x22;webSocketServer&#x22;, WebSocketServer, {
+		server: this._server,
+		path: &#x22;/ws&#x22;
+	});
+
+	// holds host data
+	this._container.createAndRegister(&#x22;hostList&#x22;, require(__dirname + &#x22;/components/ServerHostList&#x22;));
+
+	// make errors a little more descriptive
+	process.on(&#x22;uncaughtException&#x22;, function (exception) {
+		this._container.find(&#x22;logger&#x22;).error(&#x22;PM2&#x22;, &#x22;Uncaught exception&#x22;, exception &#x26;&#x26; exception.stack ? exception.stack : &#x22;No stack trace
+ available&#x22;);
+
+		throw exception;
+	}.bind(this));
+
+	// make sure we shut down cleanly
+	process.on(&#x22;SIGINT&#x22;, this.stop.bind(this));
+
+	// make sure we shut down cleanly
+	process.on(&#x22;message&#x22;, function(message) {
+		if (message == &#x22;shutdown&#x22;) {
+			this.stop();
+		}
+	});
+
+	// make sure we shut down cleanly
+	process.on(&#x22;exit&#x22;, this.stop.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.super_" id="apidoc.element.pm2-web.app.super_">
+        function <span class="apidocSignatureSpan">pm2-web.app.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WildEmitter() { }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.app.prototype" id="apidoc.module.pm2-web.app.prototype">module pm2-web.app.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype._createExpress" id="apidoc.element.pm2-web.app.prototype._createExpress">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>_createExpress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createExpress = function () {
+	var config = this._container.find(&#x22;config&#x22;);
+	var port = config.get(&#x22;www:port&#x22;);
+
+	if(config.get(&#x22;www:ssl:enabled&#x22;)) {
+		port = config.get(&#x22;www:ssl:port&#x22;);
+	}
+
+	var express = Express();
+	express.set(&#x22;port&#x22;, port);
+	express.set(&#x22;view engine&#x22;, &#x22;jade&#x22;);
+	express.set(&#x22;views&#x22;, __dirname + &#x22;/views&#x22;);
+
+	// create routes
+	this._route(express, &#x22;homeController&#x22;, &#x22;/&#x22;, &#x22;get&#x22;);
+	this._route(express, &#x22;homeController&#x22;, &#x22;/hosts/:host&#x22;, &#x22;get&#x22;);
+
+	if(config.get(&#x22;www:authentication:enabled&#x22;)) {
+		express.use(Express.basicAuth(config.get(&#x22;www:authentication:username&#x22;), config.get(&#x22;www:authentication:password&#x22;)));
+	}
+
+	express.use(Express.logger(&#x22;dev&#x22;));
+	express.use(Express.urlencoded())
+	express.use(Express.json())
+	express.use(methodOverride(&#x27;X-HTTP-Method&#x27;));          // Microsoft
+	express.use(methodOverride(&#x27;X-HTTP-Method-Override&#x27;)); // Google/GData, default option
+	express.use(methodOverride(&#x27;X-Method-Override&#x27;));      // IBM
+	express.use(express.router);
+	express.use(Express.static(__dirname + &#x22;/public&#x22;));
+
+	// development only
+	express.use(Express.errorHandler());
+
+	return express;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this._container.createAndRegister(&#x22;homeController&#x22;, require(__dirname + &#x22;/routes/Home&#x22;));
+
+	// listens for events
+	this._container.register(&#x22;pm2InterfaceFactory&#x22;, require(&#x22;pm2-interface&#x22;));
+	this._container.createAndRegister(&#x22;pm2Listener&#x22;, require(__dirname + &#x22;/components/PM2Listener&#x22;));
+
+	// create express
+	this._express = this.<span class="apidocCodeKeywordSpan">_createExpress</span>();
+
+	// http(s) server
+	this._server = this._createServer(this._express);
+
+	// web sockets
+	this._container.createAndRegister(&#x22;webSocketResponder&#x22;, require(__dirname + &#x22;/components/WebSocketResponder&#x22
+;));
+	this._container.createAndRegister(&#x22;webSocketServer&#x22;, WebSocketServer, {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype._createServer" id="apidoc.element.pm2-web.app.prototype._createServer">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>_createServer
+        <span class="apidocSignatureSpan">(express)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_createServer = function (express) {
+	var config = this._container.find(&#x22;config&#x22;);
+
+	if(config.get(&#x22;www:ssl:enabled&#x22;)) {
+		if(config.get(&#x22;www:ssl:upgrade&#x22;)) {
+			// create an app that will redirect all requests to the https version
+			var httpsUrl = &#x22;https://&#x22; + config.get(&#x22;www:host&#x22;);
+
+			if(config.get(&#x22;www:ssl:port&#x22;) != 443) {
+				httpsUrl += &#x22;:&#x22; + config.get(&#x22;www:ssl:port&#x22;);
+			}
+
+			var redirectApp = Express();
+			redirectApp.get(&#x22;*&#x22;,function(request, response){
+				response.redirect(httpsUrl + request.url);
+			});
+			process.nextTick(function() {
+				this._redirectServer = http.createServer(redirectApp);
+				this._redirectServer.listen(config.get(&#x22;www:port&#x22;), function() {
+					this._container.find(&#x22;logger&#x22;).info(&#x22;PM2Web&#x22;, &#x22;HTTP to HTTPS upgrade server listening on port &#x22; + this._redirectServer.address
+().port);
+				}.bind(this));
+			}.bind(this));
+		}
+
+		return https.createServer({
+			passphrase: config.get(&#x22;www:ssl:passphrase&#x22;),
+			key: fs.readFileSync(config.get(&#x22;www:ssl:key&#x22;)),
+			cert: fs.readFileSync(config.get(&#x22;www:ssl:certificate&#x22;))
+		}, this._express);
+	}
+
+	return http.createServer(express);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	this._container.register(&#x22;pm2InterfaceFactory&#x22;, require(&#x22;pm2-interface&#x22;));
+	this._container.createAndRegister(&#x22;pm2Listener&#x22;, require(__dirname + &#x22;/components/PM2Listener&#x22;));
+
+	// create express
+	this._express = this._createExpress();
+
+	// http(s) server
+	this._server = this.<span class="apidocCodeKeywordSpan">_createServer</span>(this._express);
+
+	// web sockets
+	this._container.createAndRegister(&#x22;webSocketResponder&#x22;, require(__dirname + &#x22;/components/WebSocketResponder&#x22
+;));
+ 	this._container.createAndRegister(&#x22;webSocketServer&#x22;, WebSocketServer, {
+		server: this._server,
+		path: &#x22;/ws&#x22;
+	});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype._route" id="apidoc.element.pm2-web.app.prototype._route">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>_route
+        <span class="apidocSignatureSpan">(express, controller, url, method)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_route = function (express, controller, url, method) {
+	var component = this._container.find(controller);
+
+	express[method](url, component[method].bind(component));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	var express = Express();
+	express.set(&#x22;port&#x22;, port);
+	express.set(&#x22;view engine&#x22;, &#x22;jade&#x22;);
+	express.set(&#x22;views&#x22;, __dirname + &#x22;/views&#x22;);
+
+	// create routes
+	this.<span class="apidocCodeKeywordSpan">_route</span>(express, &#x22;homeController&#x22;, &#x22;/&#x22;, &#x22;get&#x22;);
+	this._route(express, &#x22;homeController&#x22;, &#x22;/hosts/:host&#x22;, &#x22;get&#x22;);
+
+	if(config.get(&#x22;www:authentication:enabled&#x22;)) {
+		express.use(Express.basicAuth(config.get(&#x22;www:authentication:username&#x22;), config.get(&#x22;www:authentication:password
+&#x22;)));
+	}
+
+	express.use(Express.logger(&#x22;dev&#x22;));
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype.getAddress" id="apidoc.element.pm2-web.app.prototype.getAddress">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>getAddress
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getAddress = function () {
+	return this._address;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype.setAddress" id="apidoc.element.pm2-web.app.prototype.setAddress">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>setAddress
+        <span class="apidocSignatureSpan">(address)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setAddress = function (address) {
+	this._address = address;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+PM2Web.prototype.start = function() {
+	var config = this._container.find(&#x22;config&#x22;);
+
+	process.nextTick(function() {
+		this._server.listen(this._express.get(&#x22;port&#x22;), config.get(&#x22;www:address&#x22;), function() {
+			this._container.find(&#x22;logger&#x22;).info(&#x22;Express server listening on &#x22; + this._server.address().address + &#x22
+;:&#x22; + this._server.address().port);
+
+			this.<span class="apidocCodeKeywordSpan">setAddress</span>(&#x22;http&#x22; + (config.get(&#x22;www:ssl:enabled&#x22;) ? &#x22
+;s&#x22;: &#x22;&#x22;) + &#x22;://&#x22; + config.get(&#x22;www:host&#x22;) + &#x22;:&#x22; + this._server.address().port);
+
+			this.emit(&#x22;start&#x22;);
+		}.bind(this));
+
+		if(config.get(&#x22;mdns:enabled&#x22;)) {
+			try {
+				var mdns = require(&#x22;mdns2&#x22;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype.start" id="apidoc.element.pm2-web.app.prototype.start">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+	var config = this._container.find(&#x22;config&#x22;);
+
+	process.nextTick(function() {
+		this._server.listen(this._express.get(&#x22;port&#x22;), config.get(&#x22;www:address&#x22;), function() {
+			this._container.find(&#x22;logger&#x22;).info(&#x22;Express server listening on &#x22; + this._server.address().address + &#x22;:&#x22; + this._server.address
+().port);
+
+			this.setAddress(&#x22;http&#x22; + (config.get(&#x22;www:ssl:enabled&#x22;) ? &#x22;s&#x22;: &#x22;&#x22;) + &#x22;://&#x22; + config.get(&#x22;www:host&#x22;) + &#x22;:&#x22; + this._server.address
+().port);
+
+			this.emit(&#x22;start&#x22;);
+		}.bind(this));
+
+		if(config.get(&#x22;mdns:enabled&#x22;)) {
+			try {
+				var mdns = require(&#x22;mdns2&#x22;);
+
+				this._container.find(&#x22;logger&#x22;).info(&#x22;Starting MDNS adverisment with name&#x22;, this._container.find(&#x22;config&#x22;).get(&#x22;mdns:name&#x22;));
+
+				// publish via Bonjour
+				this._advert = mdns.createAdvertisement(mdns.tcp(&#x22;http&#x22;), this._express.get(&#x22;port&#x22;), {
+					name: config.get(&#x22;mdns:name&#x22;)
+				});
+				this._advert.start();
+			} catch(e) {
+				this._container.find(&#x22;logger&#x22;).warn(&#x22;Could not start mdns argument - did mdns2 install correctly?&#x22;, e.message);
+			}
+		}
+	}.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+var PM2Web = require(__dirname + &#x22;/server/app&#x22;);
+
+var pm2web = new PM2Web({});
+pm2web.<span class="apidocCodeKeywordSpan">start</span>();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.app.prototype.stop" id="apidoc.element.pm2-web.app.prototype.stop">
+        function <span class="apidocSignatureSpan">pm2-web.app.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+	var logger = this._container.find(&#x22;logger&#x22;);
+	logger = console;
+
+	logger.info(&#x22;PM2Web&#x22;, &#x22;Shutting down Express&#x22;);
+	this._server.close(function() {
+		logger.info(&#x22;PM2Web&#x22;, &#x22;Express shut down.&#x22;);
+	});
+
+	logger.info(&#x22;PM2Web&#x22;, &#x22;Shutting WebSocket&#x22;);
+	this._container.find(&#x22;webSocketServer&#x22;).close();
+
+	logger.info(&#x22;PM2Web&#x22;, &#x22;Disconnecting from pm2-interface&#x22;);
+	this._container.find(&#x22;pm2Listener&#x22;).close();
+
+	if(this._advert) {
+		logger.info(&#x22;PM2Web&#x22;, &#x22;Shutting down MDNS Advert&#x22;);
+		this._advert.stop();
+	}
+
+	if(this._redirectServer) {
+		logger.info(&#x22;PM2Web&#x22;, &#x22;Shutting down HTTP to HTTPS upgrade server&#x22;);
+		this._redirectServer.close(function() {
+			logger.info(&#x22;PM2Web&#x22;, &#x22;HTTP to HTTPS upgrade server shut down.&#x22;);
+		});
+	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	// make sure we shut down cleanly
+	process.on(&#x22;SIGINT&#x22;, this.stop.bind(this));
+
+	// make sure we shut down cleanly
+	process.on(&#x22;message&#x22;, function(message) {
+		if (message == &#x22;shutdown&#x22;) {
+			this.<span class="apidocCodeKeywordSpan">stop</span>();
+		}
+	});
+
+	// make sure we shut down cleanly
+	process.on(&#x22;exit&#x22;, this.stop.bind(this));
+};
+util.inherits(PM2Web, EventEmitter);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pm2-web.routes" id="apidoc.module.pm2-web.routes">module pm2-web.routes</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pm2-web.routes.1" id="apidoc.element.pm2-web.routes.1">
+        function <span class="apidocSignatureSpan">pm2-web.routes.</span>1
+        <span class="apidocSignatureSpan">($routeProvider)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">1 = function ($routeProvider) {
+		$routeProvider.
+			when(&#x22;/hosts/:host&#x22;, {
+				templateUrl: &#x22;/js/partials/host.html&#x22;
+			}).
+			otherwise({
+				templateUrl: &#x22;/js/partials/connecting.html&#x22;,
+				controller: &#x22;ConnectionController&#x22;
+			});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
